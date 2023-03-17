@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  background-color: #9595ff;
+}
+
+button {
+  background-color: #d4d3f2;
+  border: none;
+  font-size: 2em;
+}
+
+.calculatrice {
+  display: grid;
+  grid-template-areas:
+     "ecran ecran"
+     "reset reset"
+     "chiffres operations";
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr;
+  width: 400px;
+  height: 500px;
+  margin: 50px;
+  gap: 3px;
+  background-color: rgb(255, 255, 255)
+}
+
+.grid-chiffres {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  grid-area: chiffres;
+}
+
+.grid-operations {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  grid-area: operations;
+}
+
+.grid-ecran {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-area: ecran;
+  background-color: #2e2b7a;
+}
+
+.grid-ecran p {
+  text-align: right;
+  margin: 15px;
+}
+
+.grid-ecran :first-child {
+  color: rgb(197, 197, 197);
+  font-size: 1em;
+}
+
+.grid-ecran :last-child {
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+}
+
+.grid-reset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-area: reset;
+}
